@@ -1,10 +1,14 @@
 package iniciante;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
 
 public class DataHoraAprendizado {
-    public static void main(String[]args){
+    public static void main(String[]args) throws ParseException {
         DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
@@ -47,5 +51,17 @@ public class DataHoraAprendizado {
         DateTimeFormatter fmt5 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault());
         System.out.println("d02-fmt = " +fmt5.format(d06));
         System.out.println("Formato constantes date time\n"+ d05.format(DateTimeFormatter.ISO_LOCAL_DATE));
+
+        //Outra forma
+        SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date data = sdf1.parse("09/05/2025");
+        Date data2 = sdf2.parse("25/06/2025 14:59:25");
+        Date dataAtual = new Date();
+        Date dataAtual2 = new Date(System.currentTimeMillis());
+
+        System.out.println("data = "+data);
+        System.out.println("data sdf = "+sdf1.format(data));
+        Calendar calendar;
     }
 }

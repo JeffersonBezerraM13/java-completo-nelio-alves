@@ -52,5 +52,7 @@ public class DurationTest {
         System.out.println("t3 dias = "+ t3.toDays());
         Duration t4 = Duration.between(d06,pastWeekInstant);
         System.out.println("t4 dias = "+ t4.toDays());
+
+
     }
 }
