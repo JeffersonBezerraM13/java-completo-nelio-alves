@@ -1,6 +1,6 @@
 package intermediarioOO.exercicioDeFixacao.entities;
 
-public class Product {
+public class  Product {
     private String name;
     private Double price;
 
